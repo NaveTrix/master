@@ -74,8 +74,8 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`w-full bg-white border-b border-gray-200 px-4 py-3 flex items-center justify-between sticky top-0 z-30 transition-shadow duration-300 ${
-          scrolled ? "shadow-lg" : ""
+        className={`w-full bg-white/80 backdrop-blur-md border-b border-gray-200 px-4 py-3 flex items-center justify-between sticky top-0 z-30 transition-all duration-300 ${
+          scrolled ? "shadow-lg py-2" : "py-4"
         }`}
       >
         <div className="flex items-center gap-2">
