@@ -1,13 +1,36 @@
 "use client";
 import { useEffect, useState } from "react";
-import Link from "next/link";
 import Image from "next/image";
-import ContactModal from "./contact/modal";
-import { FaUserGraduate, FaCode, FaLightbulb } from "react-icons/fa";
 import { services } from "./servicesData";
+import Button from "./components/Button";
+import Card from "./components/Card";
+
+export const metadata = {
+  title: "Navetrix Technologies | Software Development, Training & Internships",
+  description: "Navetrix empowers businesses and individuals with innovative software, expert training, and hands-on internships. Build your future with Navetrix.",
+  openGraph: {
+    title: "Navetrix Technologies | Software Development, Training & Internships",
+    description: "Navetrix empowers businesses and individuals with innovative software, expert training, and hands-on internships. Build your future with Navetrix.",
+    url: "https://yourdomain.com/",
+    type: "website",
+    images: [
+      {
+        url: "https://yourdomain.com/navetrix_logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Navetrix Technologies Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Navetrix Technologies | Software Development, Training & Internships",
+    description: "Navetrix empowers businesses and individuals with innovative software, expert training, and hands-on internships. Build your future with Navetrix.",
+    images: ["https://yourdomain.com/navetrix_logo.jpg"],
+  },
+};
 
 export default function Home() {
-  const [contactOpen, setContactOpen] = useState(false);
   // Testimonials data (no ratings yet)
   const testimonialsData = [
     {
@@ -99,7 +122,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full mb-0">
             <button
               type="button"
-              onClick={() => setContactOpen(true)}
+              onClick={() => window.dispatchEvent(new Event("openContactModal"))}
               className="px-8 py-3 rounded-full bg-gradient-to-r from-[#00C9A7] to-[#6D5BFF] text-white font-bold shadow-lg hover:brightness-110 transition text-lg"
             >
               Start Your Journey
@@ -107,7 +130,6 @@ export default function Home() {
             <a href="#services" className="px-8 py-3 rounded-full border-2 border-white text-white font-bold shadow-lg hover:bg-white hover:text-[#1B1F3B] transition text-lg animate-fade-in tracking-wide">Explore Services</a>
           </div>
         </div>
-        <ContactModal open={contactOpen} onClose={() => setContactOpen(false)} />
       </section>
 
       {/* Overview Section */}
@@ -116,33 +138,35 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-stretch gap-8">
             {/* Left: Text */}
             <div className="flex-1 flex flex-col justify-center text-left">
-              <h2 className="text-base md:text-lg font-semibold text-green-600 mb-1">EMPOWERING FUTURE TALENT</h2>
+              <h2 className="text-base md:text-lg font-semibold text-[#00C9A7] mb-1">EMPOWERING FUTURE TALENT</h2>
               <h3 className="text-2xl md:text-3xl font-extrabold text-dark mb-4">Transforming careers in tech</h3>
               <p className="text-gray-800 text-lg mb-6">
                 At Navetrix, we are dedicated to empowering freshers and early-career professionals through innovative internship programs, comprehensive skill-building training, and cutting-edge software development. Our focus is on bridging the gap between education and the tech industry, equipping individuals with the tools they need to succeed. With our consulting services, we also help businesses harness the power of technology to drive success. Join us in shaping the future of tech talent and take your first step towards a thriving career today!
               </p>
-              <a
-                href="#contact"
-                onClick={e => { e.preventDefault(); setContactOpen(true); }}
-                className="inline-block text-gray-600 hover:text-gray-800 underline underline-offset-2 font-semibold transition text-lg cursor-pointer"
+              <Button
+                as="button"
+                onClick={e => { e.preventDefault(); window.dispatchEvent(new Event("openContactModal")); }}
+                className="mt-2 px-5 py-2 text-base"
               >
                 Get in touch
-              </a>
+              </Button>
             </div>
             {/* Right: Image */}
             <div className="flex-1 flex justify-center items-center">
-              <img
+              <Image
                 src="/images/internship.jpeg"
                 alt="Internship"
+                width={420}
+                height={315}
                 className="rounded-2xl shadow-lg h-full max-h-[420px] w-auto object-cover"
                 style={{ aspectRatio: '4/3', minHeight: '320px' }}
+                priority
               />
             </div>
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
-          {/* Our Mission */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-start text-left border-t-4 border-[#00C9A7] hover:scale-105 transition-transform">
+          <Card className="items-start text-left border-t-4 border-[#00C9A7] hover:scale-105 transition-transform shadow-xl p-8">
             <span className="text-5xl mb-4 text-[#00C9A7] self-center">🎯</span>
             <h2 className="text-2xl font-extrabold text-[#1B1F3B] mb-3 tracking-tight self-center text-center w-full">Our Mission</h2>
             <p className="text-gray-700 mb-3 font-medium">
@@ -153,9 +177,8 @@ export default function Home() {
               <li>Champion diversity in tech</li>
               <li>Inspire lifelong learning</li>
             </ul>
-          </div>
-          {/* What We Offer */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center text-center border-t-4 border-[#6D5BFF] hover:scale-105 transition-transform">
+          </Card>
+          <Card className="items-center text-center border-t-4 border-[#6D5BFF] hover:scale-105 transition-transform shadow-xl p-8">
             <span className="text-5xl mb-4 text-[#6D5BFF]">💡</span>
             <h2 className="text-2xl font-extrabold text-[#1B1F3B] mb-3 tracking-tight">What We Offer</h2>
             <ul className="text-gray-700 text-left list-disc list-inside space-y-2 max-w-xs mx-auto mb-3">
@@ -169,9 +192,8 @@ export default function Home() {
               <span className="inline-block bg-[#00C9A7]/10 text-[#00C9A7] font-bold px-3 py-1 rounded-full text-xs">Remote & Onsite</span>
               <span className="inline-block bg-[#6D5BFF]/10 text-[#6D5BFF] font-bold px-3 py-1 rounded-full text-xs">Global Reach</span>
             </div>
-          </div>
-          {/* Why Choose Navetrix? */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center text-center border-t-4 border-[#1B1F3B] hover:scale-105 transition-transform">
+          </Card>
+          <Card className="items-center text-center border-t-4 border-[#1B1F3B] hover:scale-105 transition-transform shadow-xl p-8">
             <span className="text-5xl mb-4 text-[#1B1F3B]">🌟</span>
             <h2 className="text-2xl font-extrabold text-[#1B1F3B] mb-3 tracking-tight">Why Choose Navetrix?</h2>
             <ul className="text-gray-700 text-left list-disc list-inside space-y-2 max-w-xs mx-auto mb-3">
@@ -182,7 +204,7 @@ export default function Home() {
               <li>Supportive, inclusive, and innovative culture</li>
             </ul>
             <span className="inline-block bg-[#1B1F3B]/10 text-[#1B1F3B] font-bold px-3 py-1 rounded-full text-xs mt-2">Trusted by 1000+ learners</span>
-          </div>
+          </Card>
         </div>
       </section>
 
@@ -214,10 +236,10 @@ export default function Home() {
                   </div>
                   <div className="p-4 flex flex-col flex-1 justify-between">
                     <h3
-                      className="text-xl font-extrabold mb-1 text-gray-900 group-hover:text-green-600 transition flex items-start justify-start cursor-pointer tracking-wide whitespace-nowrap overflow-x-auto"
+                      className="text-xl font-extrabold mb-1 text-gray-900 group-hover:text-[#00C9A7] transition flex items-start justify-start cursor-pointer tracking-wide whitespace-nowrap overflow-x-auto"
                       onClick={() => window.location.href = service.link}
                     >
-                      {service.title} <span className="ml-2 group-hover:text-green-600 transition">&gt;</span>
+                      {service.title} <span className="ml-2 group-hover:text-[#00C9A7] transition">&gt;</span>
                     </h3>
                     <p className="text-gray-700 mb-0 text-base leading-relaxed min-h-[40px] flex-1 text-left mt-2">{service.description}</p>
                   </div>
@@ -227,25 +249,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Team Section */}
-      {/* <section id="team" className="max-w-4xl mx-auto min-h-[60vh] flex flex-col justify-center snap-start py-6 px-2 mt-0 scroll-mt-24">
-        <h1 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-6">Meet Our Team</h1>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">       
-          <div className="bg-white rounded-xl shadow p-6 flex flex-col items-center text-center hover:shadow-lg transition">
-            <Image src="/images/Kalpana Reddy.jpg" alt="Kalpana Reddy" width={96} height={96} className="w-24 h-24 rounded-full object-cover mb-4 border-4 border-blue-100" />
-            <h2 className="text-xl font-semibold text-gray-900 mb-1">Kalpana Reddy</h2>
-            <div className="text-blue-700 font-medium mb-2">Founder & CEO</div>
-            <p className="text-gray-600 text-sm">Kalpana leads Navetrix with a vision to empower freshers and businesses through technology and mentorship.</p>
-          </div>         
-          <div className="bg-white rounded-xl shadow p-6 flex flex-col items-center text-center hover:shadow-lg transition">
-            <Image src="/images/alex.jpg" alt="Alex Lehrer" width={96} height={96} className="w-24 h-24 rounded-full object-cover mb-4 border-4 border-blue-100" />
-            <h2 className="text-xl font-semibold text-gray-900 mb-1">Alex Lehrer</h2>
-            <div className="text-blue-700 font-medium mb-2">Director</div>
-            <p className="text-gray-600 text-sm">Alex is Director at Navetrix, passionate about building scalable technology and mentoring the next generation of tech leaders.</p>
-          </div>
-        </div>
-      </section> */}
 
       {/* Testimonials Section */}
       <section id="testimonials" className="max-w-5xl mx-auto min-h-[40vh] flex flex-col justify-center py-4 snap-start mt-0 scroll-mt-24">

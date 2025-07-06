@@ -22,13 +22,5 @@ export const services = [
     description: "Transform your ideas into powerful software solutions.",
     link: "/services/development",
     color: "from-[#6D5BFF] to-[#00C9A7]"
-  },
-  // {
-  //   image: "/images/Consulting.jpeg",
-  //   imageAlt: "Consulting",
-  //   title: "Consulting",
-  //   description: "Expert consulting to guide your digital transformation and tech strategy.",
-  //   link: "/services/consulting",
-  //   color: "from-[#1B1F3B] to-[#00C9A7]"
-  // }
+  }
 ];

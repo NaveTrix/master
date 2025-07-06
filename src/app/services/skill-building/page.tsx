@@ -1,10 +1,38 @@
-"use client";
+export const metadata = {
+  title: "Skill-building Training",
+  description:
+    "Unlock your potential with Navetrix's skill-building training programs. Advance your tech career with hands-on courses in coding, project management, and software development.",
+  openGraph: {
+    title: "Skill-building Training | Navetrix Technologies",
+    description:
+      "Unlock your potential with Navetrix's skill-building training programs. Advance your tech career with hands-on courses in coding, project management, and software development.",
+    url: "https://yourdomain.com/services/skill-building",
+    type: "article",
+    images: [
+      {
+        url: "https://yourdomain.com/images/skill%20building.jpeg",
+        width: 800,
+        height: 600,
+        alt: "Skill-building Training at Navetrix",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Skill-building Training | Navetrix Technologies",
+    description:
+      "Unlock your potential with Navetrix's skill-building training programs. Advance your tech career with hands-on courses in coding, project management, and software development.",
+    images: ["https://yourdomain.com/images/skill%20building.jpeg"],
+  },
+  alternates: {
+    canonical: "https://yourdomain.com/services/skill-building",
+  },
+};
+
 import Image from "next/image";
-import { useState } from "react";
-import ContactModal from "../../contact/modal";
+import ScheduleButton from "./ScheduleButton";
 
 export default function SkillBuildingPage() {
-  const [contactOpen, setContactOpen] = useState(false);
   return (
     <main className="max-w-5xl mx-auto min-h-[60vh] flex flex-col md:flex-row items-stretch justify-center py-12 px-4 gap-8">
       {/* Left: Image */}
@@ -14,33 +42,27 @@ export default function SkillBuildingPage() {
           alt="Skill-building Training"
           width={400}
           height={800}
-          className="rounded-2xl shadow-lg object-cover w-full h-full max-w-full"
+          className="rounded-2xl shadow-lg object-cover w-full"
         />
       </div>
       {/* Right: Content */}
-      <div className="flex-1 flex flex-col justify-center items-start text-left min-h-full">
+      <div className="flex-1 flex flex-col justify-center items-start text-left">
         <h1 className="text-3xl md:text-4xl font-extrabold mb-4 text-[#1B1F3B]">
           Skill-building training
         </h1>
         <p className="text-lg text-gray-800 mb-6">
           Unlock your potential with our skill-building training programs designed
           specifically for individuals eager to advance in the tech sector. At
-          Technyra, we offer comprehensive courses that focus on crucial skills
+          Navetrix Technologies, we offer comprehensive courses that focus on crucial skills
           such as coding, project management, and software development. Our expert
           trainers bring a wealth of real-world experience, ensuring you receive
           practical knowledge that can be applied immediately in your career. With
           interactive lessons, hands-on projects, and personalized feedback,
-          you'll gain the confidence and expertise needed to excel in today’s
+          you&apos;ll gain the confidence and expertise needed to excel in today&apos;s
           competitive job market. Start your learning journey with us and
           transform your skills into career opportunities!
         </p>
-        <button
-          className="px-8 py-3 rounded-full bg-gradient-to-r from-[#00C9A7] to-[#6D5BFF] text-white font-bold shadow-lg hover:brightness-110 transition text-lg"
-          onClick={() => setContactOpen(true)}
-        >
-          Schedule appointment
-        </button>
-        <ContactModal open={contactOpen} onClose={() => setContactOpen(false)} />
+        <ScheduleButton />
       </div>
     </main>
   );
