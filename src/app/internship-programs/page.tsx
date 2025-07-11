@@ -35,20 +35,7 @@ export default function InternshipProgramsPage() {
           internships provide the perfect platform to grow and succeed. Join us
           today and take the first step towards a promising future in technology!
         </p>
-        <Card className="items-start text-left border-t-4 border-[#00C9A7] hover:scale-105 transition-transform shadow-xl p-8 w-full max-w-xl">
-          <span className="text-5xl mb-4 text-[#00C9A7] self-center">🎯</span>
-          <h2 className="text-lg xs:text-xl md:text-2xl font-extrabold text-[#1B1F3B] mb-3 tracking-tight self-center text-center w-full whitespace-nowrap overflow-x-auto">
-            Our Mission
-          </h2>
-          <p className="text-gray-700 mb-3 font-medium">
-            Empowering future tech leaders and helping businesses grow through hands-on experience, mentorship, and innovation.
-          </p>
-          <ul className="text-gray-600 list-disc list-inside space-y-1 max-w-xs">
-            <li>Bridging the gap between education and industry</li>
-            <li>Championing diversity and inclusion in tech</li>
-            <li>Inspiring a passion for lifelong learning</li>
-          </ul>
-        </Card>
+       
         <Button onClick={() => window.dispatchEvent(new Event("openContactModal"))}>
           Schedule appointment
         </Button>
