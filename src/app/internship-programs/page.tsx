@@ -21,7 +21,7 @@ export default function InternshipProgramsPage() {
       {/* Right: Content */}
       <div className="flex-1 flex flex-col justify-center items-start text-left min-h-full">
         <BackToServicesButton />
-        <h1 className="text-base md:text-lg font-extrabold mb-4 text-[#00C9A7] uppercase tracking-wide">
+        <h1 className="text-3xl md:text-4xl font-extrabold mb-4 text-[#1B1F3B]">
           Internship programs
         </h1>
         <p className="text-lg text-gray-800 mb-6">

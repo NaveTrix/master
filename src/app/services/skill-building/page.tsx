@@ -30,7 +30,7 @@ export const metadata = {
 };
 
 import Image from "next/image";
-import ScheduleButton from "./ScheduleButton";
+import ScheduleButton from "../../components/ScheduleButton";
 import BackToServicesButton from "../../components/BackToServicesButton";
 
 export default function SkillBuildingPage() {
