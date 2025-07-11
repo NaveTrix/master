@@ -3,7 +3,7 @@ import ScheduleButton from "./ScheduleButton";
 
 export default function InternshipPage() {
     return (
-        <main className="max-w-5xl mx-auto min-h-[60vh] flex flex-col md:flex-row items-center justify-center py-12 px-4 gap-8">
+        <div className="max-w-5xl mx-auto min-h-[60vh] flex flex-col md:flex-row items-center justify-center py-12 px-4 gap-8">
             {/* Left: Image */}
             <div className="flex-1 flex justify-center items-center mb-8 md:mb-0">
                 <Image
@@ -22,6 +22,6 @@ export default function InternshipPage() {
                 </p>
                 <ScheduleButton />
             </div>
-        </main>
+        </div>
     );
 }

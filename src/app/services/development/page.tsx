@@ -4,7 +4,7 @@ import Button from "../../components/Button";
 
 export default function DevelopmentServicePage() {
   return (
-    <main className="max-w-5xl mx-auto min-h-[60vh] flex flex-col md:flex-row items-stretch justify-center py-12 px-4 gap-8">
+    <div className="max-w-5xl mx-auto min-h-[60vh] flex flex-col md:flex-row items-stretch justify-center py-12 px-4 gap-8">
       {/* Left: Image */}
       <div className="flex-1 flex items-stretch mb-8 md:mb-0 max-w-sm">
         <Image
@@ -23,6 +23,6 @@ export default function DevelopmentServicePage() {
         </p>
         <Button onClick={() => window.dispatchEvent(new Event("openContactModal"))}>Schedule appointment</Button>
       </div>
-    </main>
+    </div>
   );
 }

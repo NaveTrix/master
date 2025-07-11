@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: "Navetrix Technologies - Code. Consult. Create.",
+  title: "Navetrix Technologies - Code. Consult. Catalyze.",
   description: "Navetrix Technologies provides real-world tech internships, expert-led training, and software solutions to empower freshers and businesses.",
 };
 
@@ -32,6 +32,10 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-icon.png" />
+      </head>
       <body
         className={`${inter.variable} ${geistSans.variable} ${geistMono.variable} antialiased bg-gray-50 min-h-screen flex flex-col font-sans`}
       >

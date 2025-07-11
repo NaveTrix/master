@@ -61,12 +61,17 @@ export default function ContactModal({ open, onClose }: { open: boolean; onClose
 			onClick={onClose}
 		>
 			<div
-				className="bg-white rounded-2xl shadow-2xl p-6 sm:p-10 w-full max-w-xl relative animate-fade-in"
+				className="bg-white rounded-2xl shadow-2xl p-6 sm:p-10 w-full max-w-xl relative animate-fade-in max-h-[90vh] overflow-y-auto"
 				onClick={e => e.stopPropagation()}
 			>
 				<button onClick={onClose} className="absolute top-3 right-3 text-gray-400 hover:text-red-500 text-3xl font-bold">&times;</button>
 				<h2 className="text-2xl sm:text-3xl font-bold mb-2 text-center text-[#00C9A7]">Get in Touch</h2>
-				<div className="text-[#00C9A7] text-center mb-4 text-base"><span className="font-bold">Start your journey with us today!</span></div>
+				<div className="text-[#00C9A7] text-center mb-2 text-base"><span className="font-bold">Start your journey with us today!</span></div>
+				{status === "success" && (
+					<div className="w-full text-green-600 bg-green-50 border border-green-200 rounded-lg text-center font-medium mb-4 py-2 animate-fade-in">
+						Message sent successfully!
+					</div>
+				)}
 				<form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
 					<div className="flex flex-col gap-1 col-span-1">
 						<label htmlFor="name" className="font-medium text-gray-700">Full Name</label>
@@ -137,9 +142,6 @@ export default function ContactModal({ open, onClose }: { open: boolean; onClose
 							Send Message
 						</Button>
 					</div>
-					{status === "success" && (
-						<div className="md:col-span-2 text-[#00C9A7] text-center font-medium mt-2 animate-fade-in">Message sent successfully!</div>
-					)}
 					{status === "error" && (
 						<div className="md:col-span-2 text-red-600 text-center font-medium mt-2 animate-fade-in">Please fill in all fields correctly.</div>
 					)}
