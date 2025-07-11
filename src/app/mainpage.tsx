@@ -146,7 +146,7 @@ export default function Home() {
       />
       <main>
         {/* Hero Section */}
-        <section id="hero" className="relative w-full min-h-[60vh] flex items-center justify-center text-center px-4 md:px-12 py-8 overflow-hidden scroll-mt-32">
+        <section id="hero" className="relative w-full min-h-[60vh] flex items-center justify-center text-center px-4 md:px-12 py-4 md:py-8 overflow-hidden scroll-mt-20">
           {/* Background Gradient + Optional Illustration */}
           <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-[#00C9A7] via-[#6D5BFF] to-[#1B1F3B] opacity-90 z-0" />
           <div className="absolute inset-0 w-full h-full bg-black/30 z-0" />
@@ -180,17 +180,20 @@ export default function Home() {
         </section>
 
         {/* Overview Section */}
-        <section id="overview" className="max-w-6xl mx-auto min-h-[60vh] flex flex-col justify-center snap-start py-6 px-2 mt-16 scroll-mt-32">
+        <section id="overview" className="max-w-6xl mx-auto min-h-[60vh] flex flex-col justify-center snap-start py-4 md:py-6 px-2 mt-8 md:mt-16 scroll-mt-20">
           <div className="bg-primary/10 rounded-2xl shadow-lg p-6 mb-4">
             {/* Title spanning both columns */}
-            <h2 className="text-sm xs:text-base md:text-lg lg:text-xl font-extrabold text-dark mb-4 text-left w-full whitespace-nowrap overflow-x-auto">
-              BRIDGING TALENT AND TECHNOLOGY FOR BUSINESS SUCCESS
+           
+            <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-extrabold text-[#1B1F3B] mb-4 normal-case">
+               Bridging Talent and Technology for Business Success
             </h2>
+          </div>
             <div className="flex flex-col md:flex-row items-stretch gap-8">
               {/* Left: Text */}
               <div className="flex-1 flex flex-col justify-center text-left">
                 <p className="text-gray-800 text-lg mb-6">
-                 At Navetrix, we connect aspiring tech professionals with real-world opportunities, equipping them with the skills to excel through hands-on internships and expert-led training.
+                 At Navetrix Technologies, we connect aspiring tech professionals with real-world opportunities, equipping them with the skills to excel through hands-on internships and expert-led training.
                 </p>
                 <p className="text-gray-800 text-lg mb-6">
                  For our business partners, we deliver innovative software development and strategic consulting that harnesses technology to accelerate growth and secure a lasting competitive edge.
@@ -281,7 +284,7 @@ export default function Home() {
         </section>
 
         {/* Services Preview */}
-        <section id="services" className="max-w-5xl mx-auto min-h-[30vh] flex flex-col justify-center snap-start mt-12 pt-6 pb-2 scroll-mt-32">
+        <section id="services" className="max-w-5xl mx-auto min-h-[30vh] flex flex-col justify-center snap-start mt-6 md:mt-12 pt-4 md:pt-6 pb-2 scroll-mt-20">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-extrabold text-[#1B1F3B] mb-4 normal-case">
               From Learning to Launch — We Power Your Tech Journey.
@@ -323,7 +326,7 @@ export default function Home() {
         </section>
 
         {/* Testimonials Section */}
-        <section id="testimonials" className="max-w-5xl mx-auto min-h-[40vh] flex flex-col justify-center py-4 snap-start mt-0 scroll-mt-24">
+        <section id="testimonials" className="max-w-5xl mx-auto min-h-[40vh] flex flex-col justify-center py-4 snap-start mt-0 scroll-mt-20">
           <h2 className="text-xl xs:text-2xl md:text-3xl font-bold mb-4 text-center text-gray-900 whitespace-nowrap overflow-x-auto">Testimonials</h2>
           {/* Modern Carousel/Slideshow */}
           <div className="relative w-full flex flex-col items-center">

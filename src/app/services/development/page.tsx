@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import Button from "../../components/Button";
+import BackToServicesButton from "../../components/BackToServicesButton";
 
 export default function DevelopmentServicePage() {
   return (
@@ -17,6 +18,7 @@ export default function DevelopmentServicePage() {
       </div>
       {/* Right: Content */}
       <div className="flex-1 flex flex-col justify-center items-start text-left min-h-full">
+        <BackToServicesButton />
         <h1 className="text-3xl md:text-4xl font-extrabold mb-4 text-[#1B1F3B]">Software Development</h1>
         <p className="text-lg text-gray-800 mb-6">
           Bring your innovative ideas to life with our expert software development services. At Navetrix Technologies, we specialize in crafting tailored software solutions that meet your unique business needs. Our team of skilled developers uses cutting-edge technologies to design, build, and optimize software applications that enhance efficiency and drive results. From conceptualization to deployment, we collaborate closely with you to ensure your vision is realized. Whether you&apos;re a startup or an established enterprise, our commitment to quality and customer satisfaction sets us apart. Partner with us and watch your ideas evolve into impactful software solutions!

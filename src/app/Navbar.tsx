@@ -31,22 +31,30 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
+    const handleHashChange = () => {
+      setCurrentHash(window.location.hash);
+    };
+
+    window.addEventListener("hashchange", handleHashChange);
+
+    return () => {
+      window.removeEventListener("hashchange", handleHashChange);
+    };
+  }, []);
+
+  useEffect(() => {
     setMobileOpen(false);
   }, [pathname, currentHash]);
 
-  function isMenuActive(link: { label: string; href: string }) {
-    // Home: highlight if on root and hash is empty or #hero
-    if (link.label === "Home") {
-      return pathname === "/" && (currentHash === "" || currentHash === "#hero");
+  useEffect(() => {
+    function handleOpenContactModal() {
+      setContactOpen(true);
     }
-    // Anchor links: highlight if hash matches
-    if (link.href.startsWith("/#")) {
-      const hash = link.href.substring(link.href.indexOf("#"));
-      return currentHash === hash;
-    }
-    // Route links: highlight if pathname matches
-    return link.href === pathname;
-  }
+    window.addEventListener("openContactModal", handleOpenContactModal);
+    return () => {
+      window.removeEventListener("openContactModal", handleOpenContactModal);
+    };
+  }, []);
 
   return (
     <>
@@ -62,7 +70,6 @@ export default function Navbar() {
           {/* Desktop Nav */}
           <ul className="hidden md:flex gap-6">
             {NAV_LINKS.map(link => {
-              const isActive = isMenuActive(link);
               return (
                 <li key={link.href}>
                   {link.label === "Contact" ? (
@@ -79,7 +86,7 @@ export default function Navbar() {
                   ) : (
                     <Link
                       href={link.href}
-                      className={`text-[#1B1F3B] font-semibold transition-colors duration-200 ${isActive ? 'text-primary' : ''}`}
+                      className={`font-semibold transition-colors duration-200 text-[#1B1F3B] hover:!text-[#00C9A7]`}
                     >
                       {link.label}
                     </Link>
@@ -105,7 +112,6 @@ export default function Navbar() {
         {mobileOpen && (
           <ul className="md:hidden flex flex-col gap-4 px-6 py-4 bg-white/95 shadow-lg absolute w-full left-0 top-full z-50 animate-fade-in">
             {NAV_LINKS.map(link => {
-              const isActive = isMenuActive(link);
               return (
                 <li key={link.href}>
                   {link.label === "Contact" ? (
@@ -123,7 +129,7 @@ export default function Navbar() {
                   ) : (
                     <Link
                       href={link.href}
-                      className={`text-[#1B1F3B] font-semibold transition-colors duration-200 ${isActive ? 'text-primary' : ''}`}
+                      className={`font-semibold transition-colors duration-200 text-[#1B1F3B] hover:!text-[#00C9A7]`}
                       onClick={() => setMobileOpen(false)}
                     >
                       {link.label}

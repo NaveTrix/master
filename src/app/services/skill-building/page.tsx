@@ -31,6 +31,7 @@ export const metadata = {
 
 import Image from "next/image";
 import ScheduleButton from "./ScheduleButton";
+import BackToServicesButton from "../../components/BackToServicesButton";
 
 export default function SkillBuildingPage() {
   return (
@@ -47,6 +48,7 @@ export default function SkillBuildingPage() {
       </div>
       {/* Right: Content */}
       <div className="flex-1 flex flex-col justify-center items-start text-left">
+        <BackToServicesButton />
         <h1 className="text-3xl md:text-4xl font-extrabold mb-4 text-[#1B1F3B]">
           Skill-building training
         </h1>

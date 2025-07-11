@@ -24,14 +24,8 @@ export default function MainPage() {
           Mentoring Talent. Building Software. Shaping Careers.
         </h2>
         <p className="text-base md:text-lg text-gray-600 mb-4">
-          We help freshers and businesses unlock their potential through
-          real-world internships, expert-led training, and innovative software
-          solutions.
-        </p>
-        <p className="text-base md:text-lg text-gray-600 mb-6">
-          Navetrix empowers growth through practical experience, skill-building,
-          and impactful technology.
-        </p>
+          Navetrix Technologies empowers individuals and businesses to grow through real-world tech internships, expert-led training, and tailored software solutions.
+        </p>      
         <div className="flex flex-col md:flex-row gap-4 justify-center">
           <a
             href="#"

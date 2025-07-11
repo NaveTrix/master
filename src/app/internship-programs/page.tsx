@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Button from "../components/Button";
+import BackToServicesButton from "../components/BackToServicesButton";
 
 export default function InternshipProgramsPage() {
   return (
@@ -18,6 +19,7 @@ export default function InternshipProgramsPage() {
       </div>
       {/* Right: Content */}
       <div className="flex-1 flex flex-col justify-center items-start text-left min-h-full">
+        <BackToServicesButton />
         <h1 className="text-base md:text-lg font-extrabold mb-4 text-[#00C9A7] uppercase tracking-wide">
           Internship programs
         </h1>
@@ -32,6 +34,16 @@ export default function InternshipProgramsPage() {
           internships provide the perfect platform to grow and succeed. Join us
           today and take the first step towards a promising future in technology!
         </p>
+        <div className="mb-6">
+          <p className="text-base md:text-lg font-medium text-gray-700 mb-3">
+            Empowering future tech leaders and helping businesses grow through hands-on experience, mentorship, and innovation.
+          </p>
+          <ul className="list-disc list-inside text-base md:text-lg text-gray-700 space-y-1 pl-4">
+            <li>Bridging the gap between education and industry</li>
+            <li>Championing diversity and inclusion in tech</li>
+            <li>Inspiring a passion for lifelong learning</li>
+          </ul>
+        </div>
         <Button onClick={() => window.dispatchEvent(new Event("openContactModal"))}>
           Schedule appointment
         </Button>
