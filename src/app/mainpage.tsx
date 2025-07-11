@@ -7,10 +7,10 @@ import Card from "./components/Card";
 
 export const metadata = {
   title: "Navetrix Technologies | Software Development, Training & Internships",
-  description: "Navetrix empowers businesses and individuals with innovative software, expert training, and hands-on internships. Build your future with Navetrix.",
+  description: "Navetrix Technologies empowers businesses and individuals with innovative software, expert training, and hands-on internships. Build your future with Navetrix.",
   openGraph: {
     title: "Navetrix Technologies | Software Development, Training & Internships",
-    description: "Navetrix empowers businesses and individuals with innovative software, expert training, and hands-on internships. Build your future with Navetrix.",
+    description: "Navetrix Technologies empowers businesses and individuals with innovative software, expert training, and hands-on internships. Build your future with Navetrix.",
     url: "https://yourdomain.com/",
     type: "website",
     images: [
@@ -25,7 +25,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Navetrix Technologies | Software Development, Training & Internships",
-    description: "Navetrix empowers businesses and individuals with innovative software, expert training, and hands-on internships. Build your future with Navetrix.",
+    description: "Navetrix Technologies empowers businesses and individuals with innovative software, expert training, and hands-on internships. Build your future with Navetrix.",
     images: ["https://yourdomain.com/navetrix_logo.jpg"],
   },
 };
@@ -164,7 +164,7 @@ export default function Home() {
               Mentoring Talent. Building Software. Shaping Careers.
             </h2>
             <p className="text-base sm:text-lg md:text-xl font-medium mb-6 text-white/90 leading-relaxed">
-              Navetrix empowers growth through real-world internships, expert-led training, and custom software solutions for businesses and individuals.
+              Navetrix Technologies empowers growth through real-world internships, expert-led training, and custom software solutions for businesses and individuals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full mb-0">
               <button
@@ -183,24 +183,24 @@ export default function Home() {
         <section id="overview" className="max-w-6xl mx-auto min-h-[60vh] flex flex-col justify-center snap-start py-4 md:py-6 px-2 mt-8 md:mt-16 scroll-mt-20">
           <div className="bg-primary/10 rounded-2xl shadow-lg p-6 mb-4">
             {/* Title spanning both columns */}
-           
+
             <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-extrabold text-[#1B1F3B] mb-4 normal-case">
-               Bridging Talent and Technology for Business Success
-            </h2>
-          </div>
+              <h2 className="text-3xl font-extrabold text-[#1B1F3B] mb-4 normal-case">
+                Bridging Talent and Technology for Business Success
+              </h2>
+            </div>
             <div className="flex flex-col md:flex-row items-stretch gap-8">
               {/* Left: Text */}
               <div className="flex-1 flex flex-col justify-center text-left">
                 <p className="text-gray-800 text-lg mb-6">
-                 At Navetrix Technologies, we connect aspiring tech professionals with real-world opportunities, equipping them with the skills to excel through hands-on internships and expert-led training.
+                  At Navetrix Technologies, we connect aspiring tech professionals with real-world opportunities, equipping them with the skills to excel through hands-on internships and expert-led training.
                 </p>
                 <p className="text-gray-800 text-lg mb-6">
-                 For our business partners, we deliver innovative software development and strategic consulting that harnesses technology to accelerate growth and secure a lasting competitive edge.
+                  For our business partners, we deliver innovative software development and strategic consulting that harnesses technology to accelerate growth and secure a lasting competitive edge.
                 </p>
                 <p className="text-gray-800 text-lg mb-6">
                   Whether you’re launching your tech career or looking to transform your business, Navetrix is your dedicated partner for success.
-                  </p>
+                </p>
                 <Button
                   as="button"
                   onClick={e => { e.preventDefault(); window.dispatchEvent(new Event("openContactModal")); }}
@@ -231,10 +231,12 @@ export default function Home() {
               <p className="text-gray-700 mb-3 font-medium">
                 Empowering future tech leaders and helping businesses grow through hands-on experience, mentorship, and innovation.
               </p>
-              <ul className="text-gray-600 list-disc list-inside space-y-1 max-w-xs">
-                <li>Bridging the gap between education and industry</li>
-                <li>Championing diversity and inclusion in tech</li>
-                <li>Inspiring a passion for lifelong learning</li>
+              <ul className="text-gray-700 list-disc list-inside space-y-1 mb-3">
+                <li>Bridge the gap between education and industry</li>
+                <li>Deliver hands-on training and internships</li>
+                <li>Build custom software for real-world needs</li>
+                <li>Connect learners with mentors and tools</li>
+                <li>Foster innovation and problem-solving</li>                
               </ul>
             </Card>
             {/* What We Offer */}
@@ -275,7 +277,7 @@ export default function Home() {
                 </p>
                 <div className="font-semibold text-[#6D5BFF] mb-1">Innovate Together:</div>
                 <p className="text-gray-700 mb-3">
-                 Thrive in a supportive environment that values diversity and prepares you for the future of work.
+                  Thrive in a supportive environment that values diversity and prepares you for the future of work.
                 </p>
               </div>
               <span className="inline-block bg-[#1B1F3B]/10 text-[#1B1F3B] font-bold px-3 py-1 rounded-full text-xs mt-2">Trusted by 1000+ learners</span>
