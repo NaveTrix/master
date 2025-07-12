@@ -1,10 +1,10 @@
 export const services = [
   {
-    image: "/images/internships.jpeg",
+    image: "/images/internship.jpeg",
     imageAlt: "Internship",
     title: "Internship",
     description: "Launch your career with hands-on experience.",
-    link: "/internship-programs",
+    link: "/services/internship-programs",
     color: "from-[#00C9A7] to-[#6D5BFF]"
   },
   {

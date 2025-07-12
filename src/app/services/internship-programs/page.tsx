@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import Button from "../components/Button";
-import BackToServicesButton from "../components/BackToServicesButton";
+import Button from "../../components/Button";
+import BackToServicesButton from "../../components/BackToServicesButton";
 
 export default function InternshipProgramsPage() {
   return (
@@ -10,7 +10,7 @@ export default function InternshipProgramsPage() {
       {/* Left: Image */}
       <div className="flex-1 flex items-stretch mb-8 md:mb-0 max-w-sm">
         <Image
-          src="/images/internships.jpeg"
+          src="/images/internship.jpeg"
           alt="Internship"
           width={400}
           height={800}
