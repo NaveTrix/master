@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Button from "../components/Button";
 import BackToServicesButton from "../components/BackToServicesButton";
-import Card from "../components/Card";
 
 export default function InternshipProgramsPage() {
   return (

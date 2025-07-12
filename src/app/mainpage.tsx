@@ -44,36 +44,40 @@ const testimonialsData: Omit<Testimonial, 'rating'>[] = [
     author: "Priya Sharma, India",
   },
   {
-    text: "Our SaaS startup scaled faster thanks to Navetrix’s expert consulting and development team. Highly recommended!",
-    author: "Lucas Brown, Australia",
-  },
-  {
-    text: "The hands-on training was practical and engaging. I felt supported every step of the way.",
-    author: "Emily Wilson, Australia",
-  },
-  {
-    text: "Navetrix’s team delivered our mobile app on time and exceeded our expectations. Communication was excellent.",
-    author: "Oliver Smith, Australia",
-  },
-  {
-    text: "I joined as a fresher and left with confidence and skills. The internship was truly international and diverse.",
-    author: "Ava Johnson, USA",
-  },
-  {
-    text: "The consulting sessions were insightful and tailored to our business needs. We saw real results!",
-    author: "Sophie Taylor, Australia",
-  },
-  {
     text: "Navetrix’s training helped me transition into tech from a non-IT background. The support was amazing.",
     author: "Rohan Patel, India",
   },
   {
-    text: "Great experience! The instructors were knowledgeable and always available for guidance.",
-    author: "Jack Williams, Australia",
-  },
-  {
     text: "Navetrix gave me the platform to co-create innovative solutions and mentor a global team. Proud to be part of a company that values growth and collaboration.",
     author: "Rahul Mehta, India",
+  },
+  {
+    text: "I joined as a fresher and left with confidence and skills. The internship was truly diverse and supportive.",
+    author: "Ananya Verma, India",
+  },
+  {
+    text: "The hands-on training was practical and engaging. I felt supported every step of the way.",
+    author: "Siddharth Rao, India",
+  },
+  {
+    text: "Great experience! The instructors were knowledgeable and always available for guidance.",
+    author: "Meera Nair, India",
+  },
+  {
+    text: "The consulting sessions were insightful and tailored to our business needs. We saw real results!",
+    author: "Vikram Singh, India",
+  },
+  {
+    text: "Navetrix’s mentorship helped me build a strong foundation in software development. Highly recommended!",
+    author: "Kavya Iyer, India",
+  },
+  {
+    text: "The real-world projects and collaborative environment made learning enjoyable and effective.",
+    author: "Arjun Desai, India",
+  },
+  {
+    text: "Supportive trainers and a focus on practical skills set Navetrix apart from other programs.",
+    author: "Sneha Pillai, India",
   },
 ];
 

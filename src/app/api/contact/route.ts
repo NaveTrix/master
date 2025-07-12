@@ -9,31 +9,30 @@ function sanitizeInput(input: string): string {
 }
 
 export async function POST(req: Request) {
-  let { name, email, subject, message, hcaptchaToken } = await req.json();
+  const { name: rawName, email: rawEmail, subject: rawSubject, message: rawMessage, hcaptchaToken } = await req.json();
+  const name = sanitizeInput(rawName || "");
+  const email = sanitizeInput(rawEmail || "");
+  const subject = sanitizeInput(rawSubject || "");
+  const message = sanitizeInput(rawMessage || "");
+  const token = hcaptchaToken;
 
   // Debug logs for troubleshooting
   console.log("hcaptchaToken:", hcaptchaToken);
   const hcaptchaSecret = process.env.HCAPTCHA_SECRET;
   console.log("hcaptchaSecret:", hcaptchaSecret);
 
-  // Sanitize all user input
-  name = sanitizeInput(name || "");
-  email = sanitizeInput(email || "");
-  subject = sanitizeInput(subject || "");
-  message = sanitizeInput(message || "");
-
   if (!name || !email || !subject || !message) {
     return NextResponse.json({ error: "All fields are required." }, { status: 400 });
   }
 
   // hCaptcha verification
-  if (!hcaptchaToken || !hcaptchaSecret) {
+  if (!token || !hcaptchaSecret) {
     return NextResponse.json({ error: "CAPTCHA verification failed." }, { status: 400 });
   }
   const captchaRes = await fetch("https://hcaptcha.com/siteverify", {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: `secret=${hcaptchaSecret}&response=${hcaptchaToken}`,
+    body: `secret=${hcaptchaSecret}&response=${token}`,
   });
   const captchaData = await captchaRes.json();
   console.log("hCaptcha verification response:", captchaData);
@@ -61,7 +60,7 @@ export async function POST(req: Request) {
       body: JSON.stringify({
         from,
         to,
-        subject: `[Navetrix Contact] ${subject}`,
+        subject:  subject,
         reply_to: email,
         text: `Name: ${name}\nEmail: ${email}\n\n${message}`,
       }),
