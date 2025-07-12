@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@hcaptcha/react-hcaptcha": "^1.12.0",
     "clsx": "^2.1.1",
     "framer-motion": "^12.18.1",
     "gray-matter": "^4.0.3",
@@ -18,7 +19,8 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
-    "swiper": "^11.2.8"
+    "swiper": "^11.2.8",
+    "yup": "^1.6.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
