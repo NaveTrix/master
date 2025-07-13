@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
     ],
     unoptimized: true, // Disable Image Optimization for static export
   },
-  output: "export", // Enable static export for cPanel deployment
+  //output: "export", // Enable static export for cPanel deployment
 };
 
 export default nextConfig;
