@@ -43,6 +43,34 @@ This is a [Next.js](https://nextjs.org) project for Navetrix Technologies, style
    - Make sure your domain is pointed to Namecheap and DNS is set up.
    - Visit your domain to verify the deployment.
 
+## Deploying to Vercel (Recommended)
+
+[Vercel](https://vercel.com) is the official hosting platform for Next.js and provides seamless integration, serverless functions, and automatic CI/CD.
+
+### 1. Deploy with One Click
+- Go to [https://vercel.com/import](https://vercel.com/import) and import your GitHub/GitLab/Bitbucket repository, or use the Vercel CLI:
+  ```bash
+  npx vercel
+  ```
+- Follow the prompts to link your project and select the correct framework (Next.js).
+
+### 2. Set Environment Variables
+- In your Vercel dashboard, go to your project > Settings > Environment Variables.
+- Add the following variables (from your `.env` file):
+  - `RESEND_API_KEY`
+  - `RESEND_FROM`
+  - `RESEND_TO`
+  - `HCAPTCHA_SECRET`
+  - `NEXT_PUBLIC_HCAPTCHA_SITEKEY`
+- Deploy or redeploy your project after saving variables.
+
+### 3. Production URL
+- After deployment, your site will be live at `https://your-vercel-project-name.vercel.app` or your custom domain (e.g., `https://navetrix.com`) if configured.
+- You can manage custom domains in the Vercel dashboard.
+
+### 4. Serverless Functions
+- API routes (e.g., `/api/contact`) work out of the box on Vercel, enabling features like the contact form with Resend and hCaptcha.
+
 ## Environment Variables & Third-Party Service Setup
 
 ### 1. Resend (Transactional Email Service)

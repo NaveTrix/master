@@ -207,7 +207,7 @@ export default function ContactModal({ open, onClose }: { open: boolean; onClose
 	// Move topRef to the modal content div
 	return createPortal(
 		<div
-			className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 px-2 sm:px-0"
+			className="fixed inset-0 z-[2000] flex items-center justify-center bg-black/40 px-2 sm:px-0"
 			role="dialog"
 			aria-modal="true"
 			tabIndex={-1}
@@ -260,7 +260,7 @@ export default function ContactModal({ open, onClose }: { open: boolean; onClose
 							value={form.name}
 							onChange={handleChange}
 							onBlur={handleBlur}
-							placeholder="Priya Sharma"
+							placeholder="Ada Lovelace"
 							className={`rounded-lg border shadow-sm px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#00C9A7] transition text-base ${errors.name && (touched.name || status === "error") ? 'border-red-400' : 'border-gray-300'}`}
 							autoComplete="off"
 							aria-invalid={!!errors.name}
@@ -281,7 +281,7 @@ export default function ContactModal({ open, onClose }: { open: boolean; onClose
 							value={form.email}
 							onChange={handleChange}
 							onBlur={handleBlur}
-							placeholder="priya@email.com"
+							placeholder="ada@navetrix.dev"
 							className={`rounded-lg border shadow-sm px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#00C9A7] transition text-base ${errors.email && (touched.email || status === "error") ? 'border-red-400' : 'border-gray-300'}`}
 							autoComplete="off"
 							aria-invalid={!!errors.email}

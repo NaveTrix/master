@@ -6,11 +6,11 @@ export const metadata = {
     title: "Skill-building Training | Navetrix Technologies",
     description:
       "Unlock your potential with Navetrix's skill-building training programs. Advance your tech career with hands-on courses in coding, project management, and software development.",
-    url: "https://yourdomain.com/services/skill-building",
+    url: "https://navetrix.com/services/skill-building",
     type: "article",
     images: [
       {
-        url: "https://yourdomain.com/images/skill%20building.jpeg",
+        url: "https://navetrix.com/images/skill%20building.jpeg",
         width: 800,
         height: 600,
         alt: "Skill-building Training at Navetrix",
@@ -22,10 +22,10 @@ export const metadata = {
     title: "Skill-building Training | Navetrix Technologies",
     description:
       "Unlock your potential with Navetrix's skill-building training programs. Advance your tech career with hands-on courses in coding, project management, and software development.",
-    images: ["https://yourdomain.com/images/skill%20building.jpeg"],
+    images: ["https://navetrix.com/images/skill%20building.jpeg"],
   },
   alternates: {
-    canonical: "https://yourdomain.com/services/skill-building",
+    canonical: "https://navetrix.com/services/skill-building",
   },
 };
 
@@ -35,7 +35,7 @@ import BackToServicesButton from "../../components/BackToServicesButton";
 
 export default function SkillBuildingPage() {
   return (
-    <div className="max-w-5xl mx-auto min-h-[60vh] flex flex-col md:flex-row items-stretch justify-center py-12 px-4 gap-8">
+    <div className="max-w-5xl mx-auto min-h-[60vh] flex flex-col md:flex-row items-stretch justify-center py-24 px-4 gap-8 mt-16">
       {/* Left: Image */}
       <div className="flex-1 flex items-stretch mb-8 md:mb-0 max-w-sm">
         <Image

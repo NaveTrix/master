@@ -1,9 +1,10 @@
 "use client";
 import Image from "next/image";
+import { openContactModal } from "../../components/utils";
 
 export default function ConsultingServicePage() {
   return (
-    <main className="max-w-5xl mx-auto min-h-[60vh] flex flex-col md:flex-row items-stretch justify-center py-12 px-4 gap-8">
+    <main className="max-w-5xl mx-auto min-h-[60vh] flex flex-col md:flex-row items-stretch justify-center py-24 px-4 gap-8 mt-16">
       {/* Left: Image */}
       <div className="flex-1 flex items-stretch mb-8 md:mb-0 max-w-sm">
         <Image
@@ -22,7 +23,7 @@ export default function ConsultingServicePage() {
         </p>
         <button
           className="text-gray-600 hover:text-gray-800 underline underline-offset-2 font-semibold transition text-lg"
-          onClick={() => window.dispatchEvent(new Event("openContactModal"))}
+          onClick={openContactModal}
         >
           Schedule appointment
         </button>

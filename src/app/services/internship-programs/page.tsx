@@ -3,10 +3,11 @@
 import Image from "next/image";
 import Button from "../../components/Button";
 import BackToServicesButton from "../../components/BackToServicesButton";
+import { openContactModal } from "../../components/utils";
 
 export default function InternshipProgramsPage() {
   return (
-    <main className="max-w-5xl mx-auto min-h-[60vh] flex flex-col md:flex-row items-stretch justify-center py-12 px-4 gap-8">
+    <main className="max-w-5xl mx-auto min-h-[60vh] flex flex-col md:flex-row items-stretch justify-center py-24 px-4 gap-8 mt-16">
       {/* Left: Image */}
       <div className="flex-1 flex items-stretch mb-8 md:mb-0 max-w-sm">
         <Image
@@ -35,7 +36,7 @@ export default function InternshipProgramsPage() {
           today and take the first step towards a promising future in technology!
         </p>
        
-        <Button onClick={() => window.dispatchEvent(new Event("openContactModal"))}>
+        <Button onClick={openContactModal}>
           Schedule appointment
         </Button>
       </div>

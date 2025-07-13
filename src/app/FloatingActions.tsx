@@ -1,17 +1,14 @@
 "use client";
 import { FaWhatsapp, FaComments } from "react-icons/fa";
+import { openContactModal } from "./components/utils"; // Adjust the import based on your project structure
 
 export default function FloatingActions() {
-  // For chat modal trigger, we dispatch the same event as the footer/nav
-  const openContact = () => {
-    window.dispatchEvent(new Event("openContactModal"));
-  };
   return (
     <div className="fixed bottom-6 right-6 flex flex-col gap-4 z-50">
       {/* Chat Icon: white background, blue border, blue icon */}
       <button
         aria-label="Chat with us"
-        onClick={openContact}
+        onClick={openContactModal}
         className="bg-white text-primary border-4 border-primary shadow-xl rounded-full p-5 flex items-center justify-center transition-transform duration-200 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-primary/60"
       >
         <FaComments size={32} />

@@ -42,7 +42,7 @@ export default function RootLayout({
         <meta property="og:title" content="Navetrix Technologies - Code. Consult. Catalyze." />
         <meta property="og:description" content="Navetrix Technologies provides real-world tech internships, expert-led training, and software solutions to empower freshers and businesses." />
         <meta property="og:image" content="/navetrix_logo.jpg" />
-        <meta property="og:url" content="https://yourdomain.com" />
+        <meta property="og:url" content="https://navetrix.com" />
         <meta property="og:type" content="website" />
         {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -54,8 +54,8 @@ export default function RootLayout({
           "@context": "https://schema.org",
           "@type": "Organization",
           "name": "Navetrix Technologies",
-          "url": "https://yourdomain.com",
-          "logo": "https://yourdomain.com/navetrix_logo.jpg",
+          "url": "https://navetrix.com",
+          "logo": "https://navetrix.com/navetrix_logo.jpg",
           "contactPoint": [{
             "@type": "ContactPoint",
             "email": "info@navetrix.com",
@@ -71,7 +71,7 @@ export default function RootLayout({
         {/* Floating Chat/WhatsApp Actions (Client Only) */}
         <ClientInserts />
         {/* Main Content Area */}
-        <main className="flex-1 w-full max-w-5xl mx-auto px-4 py-8">
+        <main className="w-full">
           {children}
         </main>
         {/* Footer */}
@@ -82,10 +82,9 @@ export default function RootLayout({
               <div className="flex items-center gap-2 mb-4">
                 {/* Logo or Brand Name */}
                 <div className="space-y-1 mb-4">
-                  <h2 className="text-xl md:text-2xl font-extrabold uppercase bg-gradient-to-r from-[#00C9A7] via-white to-[#1B1F3B] text-white bg-clip-text tracking-tight drop-shadow-lg" style={{ WebkitTextFillColor: 'white', color: 'white' }}>
-                    Navetrix
+                  <h2 className="text-xl md:text-2xl font-extrabold uppercase tracking-tight drop-shadow-lg whitespace-nowrap">
+                    NAVETRIX <span className="font-light">Technologies</span>
                   </h2>
-                  <span className="text-xs text-gray-300 tracking-widest uppercase font-semibold ml-[2px] drop-shadow">Technologies</span>
                 </div>
               </div>
               <p className="text-gray-300 text-base leading-relaxed mb-6 drop-shadow">
@@ -125,6 +124,13 @@ export default function RootLayout({
                   <a href="#" aria-label="Instagram" className="hover:text-[#00C9A7] transition-colors">
                     <svg className="w-7 h-7 drop-shadow" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M12 2.2c3.2 0 3.584.012 4.85.07 1.17.056 1.97.24 2.43.41.59.22 1.01.48 1.45.92.44.44.7.86.92 1.45.17.46.354 1.26.41 2.43.058 1.266.07 1.65.07 4.85s-.012 3.584-.07 4.85c-.056 1.17-.24 1.97-.41 2.43-.22.59-.48 1.01-.92 1.45-.44.44-.86.7-1.45.92-.46.17-1.26.354-2.43.41-1.266.058-1.65.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.056-1.97-.24-2.43-.41-.59-.22-1.01-.48-1.45-.92-.44-.44-.7-.86-.92-1.45-.17-.46-.354-1.26-.41-2.43C2.212 15.634 2.2 15.25 2.2 12s.012-3.584.07-4.85c.056-1.17.24-1.97.41-2.43.22-.59.48-1.01.92-1.45.44-.44.86-.7 1.45-.92.46-.17 1.26-.354 2.43-.41C8.416 2.212 8.8 2.2 12 2.2zm0-2.2C8.736 0 8.332.012 7.052.07c-1.28.058-2.15.24-2.91.51-.8.28-1.48.66-2.15 1.33-.67.67-1.05 1.35-1.33 2.15-.27.76-.452 1.63-.51 2.91C.012 8.332 0 8.736 0 12c0 3.264.012 3.668.07 4.948.058 1.28.24 2.15.51 2.91.28.8.66 1.48 1.33 2.15.67.67 1.35 1.05 2.15 1.33.76.27 1.63.452 2.91.51C8.332 23.988 8.736 24 12 24s3.668-.012 4.948-.07c1.28-.058 2.15-.24 2.91-.51.8-.28 1.48-.66 2.15-1.33.67-.67 1.05-1.35 1.33-2.15.27-.76.452-1.63.51-2.91.058-1.28.07-1.684.07-4.948s-.012-3.668-.07-4.948c-.058-1.28-.24-2.15-.51-2.91-.28-.8-.66-1.48-1.33-2.15-.67-.67-1.35-1.05-2.15-1.33-.76-.27-1.63-.452-2.91-.51C15.668.012 15.264 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm7.844-10.406a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.youtube.com/@NavetrixTechnologies" aria-label="YouTube" className="hover:text-[#00C9A7] transition-colors" target="_blank" rel="noopener noreferrer">
+                    <svg className="w-7 h-7 drop-shadow" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M23.498 6.186a2.994 2.994 0 0 0-2.107-2.12C19.379 3.5 12 3.5 12 3.5s-7.379 0-9.391.566A2.994 2.994 0 0 0 .502 6.186C0 8.2 0 12 0 12s0 3.8.502 5.814a2.994 2.994 0 0 0 2.107 2.12C4.621 20.5 12 20.5 12 20.5s7.379 0 9.391-.566a2.994 2.994 0 0 0 2.107-2.12C24 15.8 24 12 24 12s0-3.8-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                     </svg>
                   </a>
                 </li>
