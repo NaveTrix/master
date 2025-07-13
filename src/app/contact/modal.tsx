@@ -21,7 +21,7 @@ export default function ContactModal({ open, onClose }: { open: boolean; onClose
 	const messageRef = useRef<HTMLTextAreaElement>(null);
 	const hcaptchaRef = useRef<HCaptcha | null>(null);
 	const captchaSectionRef = useRef<HTMLDivElement>(null);
-	const topRef = useRef<HTMLDivElement>(null);
+	const modalRef = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
 		if (status === "success") {
@@ -52,6 +52,46 @@ export default function ContactModal({ open, onClose }: { open: boolean; onClose
 			if (hcaptchaRef.current) hcaptchaRef.current.resetCaptcha();
 		}
 	}, [open]);
+
+	// Focus trap and Escape key to close
+	useEffect(() => {
+		if (!open) return;
+		const previouslyFocused = document.activeElement as HTMLElement | null;
+		const focusableSelectors = [
+			'a[href]', 'button:not([disabled])', 'textarea:not([disabled])', 'input:not([disabled])', '[tabindex]:not([tabindex="-1"])'
+		];
+		const trapFocus = (e: KeyboardEvent) => {
+			if (e.key === 'Escape') {
+				e.preventDefault();
+				onClose();
+				return;
+			}
+			if (e.key === 'Tab' && modalRef.current) {
+				const focusableEls = modalRef.current.querySelectorAll<HTMLElement>(focusableSelectors.join(','));
+				const first = focusableEls[0];
+				const last = focusableEls[focusableEls.length - 1];
+				if (!e.shiftKey && document.activeElement === last) {
+					e.preventDefault();
+					first.focus();
+				} else if (e.shiftKey && document.activeElement === first) {
+					e.preventDefault();
+					last.focus();
+				}
+			}
+		};
+		const focusFirst = () => {
+			if (modalRef.current) {
+				const focusableEls = modalRef.current.querySelectorAll<HTMLElement>(focusableSelectors.join(','));
+				if (focusableEls.length) focusableEls[0].focus();
+			}
+		};
+		setTimeout(focusFirst, 0);
+		document.addEventListener('keydown', trapFocus);
+		return () => {
+			document.removeEventListener('keydown', trapFocus);
+			if (previouslyFocused) previouslyFocused.focus();
+		};
+	}, [open, onClose]);
 
 	if (!open) return null;
 
@@ -142,23 +182,23 @@ export default function ContactModal({ open, onClose }: { open: boolean; onClose
 				setCaptchaToken(null);
 				if (hcaptchaRef.current) hcaptchaRef.current.resetCaptcha();
 				// Scroll modal content to top
-				if (topRef.current) {
-					topRef.current.scrollTop = 0;
+				if (modalRef.current) {
+					modalRef.current.scrollTop = 0;
 				}
 			} else {
 				const errorData = await res.json().catch(() => ({}));
 				console.error("Contact API error:", errorData.error || res.statusText);
 				setStatus("error");
 				// Scroll modal content to top
-				if (topRef.current) {
-					topRef.current.scrollTop = 0;
+				if (modalRef.current) {
+					modalRef.current.scrollTop = 0;
 				}
 			}
 		} catch (err) {
 			console.error("Contact API network error:", err);
 			setStatus("error");
-			if (topRef.current) {
-				topRef.current.scrollTop = 0;
+			if (modalRef.current) {
+				modalRef.current.scrollTop = 0;
 			}
 		}
 		setLoading(false);
@@ -168,15 +208,27 @@ export default function ContactModal({ open, onClose }: { open: boolean; onClose
 	return createPortal(
 		<div
 			className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 px-2 sm:px-0"
+			role="dialog"
+			aria-modal="true"
+			tabIndex={-1}
 			onClick={onClose}
 		>
 			<div
-				ref={topRef}
+				ref={modalRef}
 				className="bg-white rounded-2xl shadow-2xl p-2 sm:p-6 w-full max-w-xl relative animate-fade-in max-h-[100dvh] overflow-y-auto flex flex-col"
 				onClick={e => e.stopPropagation()}
 				style={{ maxHeight: '100dvh', minHeight: '0', height: 'auto' }}
 			>
-				<button onClick={onClose} className="absolute top-3 right-3 text-gray-400 hover:text-red-500 text-3xl font-bold">&times;</button>
+				<button
+					onClick={onClose}
+					className="absolute top-3 right-3 z-50 text-gray-400 hover:text-red-500 text-3xl font-bold pointer-events-auto"
+					aria-label="Close contact form"
+					type="button"
+					title="Close"
+					style={{ touchAction: 'manipulation', width: 48, height: 48, background: 'none', zIndex: 100, outline: 'none', boxShadow: 'none' }}
+				>
+					<span aria-hidden="true">&times;</span>
+				</button>
 				{/* Updated heading and subheading design */}
 				<h2 className="text-3xl sm:text-4xl font-extrabold mb-2 text-center text-[#1B1F3B] tracking-tight drop-shadow-lg">
 					Let’s Connect
