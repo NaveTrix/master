@@ -8,6 +8,7 @@ import { openContactModal } from "../../components/utils";
 export default function InternshipProgramsPage() {
   return (
     <>
+       <div className="max-w-5xl mx-auto w-full px-4 pt-20 md:pt-24 bg-white"></div>
       <div className="max-w-5xl mx-auto w-full px-4 pt-20 md:pt-24">
         <BackToServicesButton className="mb-4" />
       </div>
