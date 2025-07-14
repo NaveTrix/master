@@ -2,7 +2,6 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { openContactModal } from "./utils";
-import type { ComponentType } from "react";
 
 const images = [
     "/images/hero/slide1.avif",
@@ -23,8 +22,10 @@ const paragraph =
     "We empower growth through real-world internships, expert-led training, and custom software solutions for businesses and individuals.";
 
 export default function HeroSlider() {
-    const [AnimatePresence, setAnimatePresence] = useState<ComponentType<any> | null>(null);
-    const [MotionImg, setMotionImg] = useState<ComponentType<any> | null>(null);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const [AnimatePresence, setAnimatePresence] = useState<any>(null);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const [MotionImg, setMotionImg] = useState<any>(null);
 
     useEffect(() => {
         // Dynamically import framer-motion only on client
