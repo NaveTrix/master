@@ -41,7 +41,7 @@ export default function SkillBuildingPage() {
       </div>
       <div className="max-w-5xl mx-auto min-h-[60vh] flex flex-col md:flex-row items-stretch justify-center px-4 gap-8 mt-0 bg-white">
         {/* Left: Image */}
-        <div className="flex-1 flex items-stretch mb-8 md:mb-0 max-w-sm mt-0">
+        <div className="flex-1 flex items-stretch mb-4 md:mb-0 max-w-sm min-h-[220px] md:min-h-0">
           <Image
             src="/images/skill building.avif"
             alt="Skill-building Training"
@@ -51,7 +51,7 @@ export default function SkillBuildingPage() {
           />
         </div>
         {/* Right: Content */}
-        <div className="flex-1 flex flex-col justify-start items-start text-left min-h-full mt-[-2rem] md:mt-0">
+        <div className="flex-1 flex flex-col justify-start items-start text-left min-h-[220px] md:min-h-full">
           <h1 className="text-3xl md:text-4xl font-extrabold mb-4 text-[#1B1F3B]">
             Skill-building training
           </h1>
