@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { openContactModal } from "./utils";
-import type { ComponentType, FunctionComponent, ImgHTMLAttributes } from "react";
+import type { ComponentType } from "react";
 
 const images = [
     "/images/hero/slide1.avif",

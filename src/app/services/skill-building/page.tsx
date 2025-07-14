@@ -47,6 +47,7 @@ export default function SkillBuildingPage() {
             alt="Skill-building Training"
             width={400}
             height={800}
+            priority
             className="rounded-2xl shadow-lg object-cover w-full"
           />
         </div>

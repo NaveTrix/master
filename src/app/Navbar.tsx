@@ -94,7 +94,7 @@ export default function Navbar() {
           {/* Logo or Text Logo depending on scroll/hero */}
           {scrolled ? (
             <Link href="/" className="flex items-center font-extrabold text-xl text-[#1B1F3B] tracking-tight">
-              <Image src="/navetrix_logo.jpg" alt="Navetrix Logo" width={120} height={40} className="h-10 w-auto mr-2" priority />
+              <Image src="/navetrix_logo.jpg" alt="Navetrix Logo" width={120} height={40} style={{ width: 120, height: 'auto' }} className="h-10 w-auto mr-2" priority />
             </Link>
           ) : (
             <div className="logo_col col-xs col-sm-fit">
