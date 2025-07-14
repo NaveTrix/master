@@ -182,7 +182,7 @@ export default function Home() {
                 {/* Right: Image */}
                 <div className="flex-1 flex items-stretch justify-center hidden md:flex">
                   <Image
-                    src="/images/development.jpeg"
+                    src="/images/development.avif"
                     alt="Navetrix Overview"
                     width={420}
                     height={420}

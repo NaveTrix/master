@@ -20,6 +20,7 @@ export default function InternshipProgramsPage() {
               alt="Internship"
               width={500}
               height={500}
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="rounded-2xl shadow-lg object-cover w-full h-full"
             />
           </div>

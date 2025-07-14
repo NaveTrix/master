@@ -49,6 +49,7 @@ export default function SkillBuildingPage() {
               width={500}
               height={500}
               priority
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="rounded-2xl shadow-lg object-cover w-full h-full"
             />
           </div>

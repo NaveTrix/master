@@ -14,10 +14,11 @@ export default function ConsultingServicePage() {
         <section className="flex-1 flex items-center justify-center mb-0 md:mb-0">
           <div className="w-full max-w-md h-[180px] md:h-full flex items-center justify-center">
             <Image
-              src="/images/consulting.jpeg"
+              src="/images/consulting.avif"
               alt="Consulting"
               width={500}
               height={500}
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="rounded-2xl shadow-lg object-cover w-full h-full"
             />
           </div>

@@ -13,13 +13,13 @@ const cards = [
 	{
 		title: "Skill Training",
 		desc: "Master in-demand skills with expert-led training designed for freshers and professionals.",
-		img: "/images/training.jpg",
+		img: "/images/training.avif",
 		href: "/training",
 	},
 	{
 		title: "Development Services",
 		desc: "Accelerate your business with custom web, mobile, and automation solutions.",
-		img: "/images/development.jpg",
+		img: "/images/development.avif",
 		href: "/development",
 	},
 ];

@@ -16,7 +16,7 @@ export const services = [
     color: "from-[#00C9A7] to-[#6D5BFF]"
   },
   {
-    image: "/images/software development.jpeg",
+    image: "/images/software development.avif",
     imageAlt: "Software Development",
     title: "Software Development",
     description: "Transform your ideas into powerful software solutions.",
