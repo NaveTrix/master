@@ -10,7 +10,7 @@ export const metadata = {
     type: "article",
     images: [
       {
-        url: "https://navetrix.com/images/skill%20building.jpeg",
+        url: "https://navetrix.com/images/skill%20building.avif",
         width: 800,
         height: 600,
         alt: "Skill-building Training at Navetrix",
@@ -22,7 +22,7 @@ export const metadata = {
     title: "Skill-building Training | Navetrix Technologies",
     description:
       "Unlock your potential with Navetrix's skill-building training programs. Advance your tech career with hands-on courses in coding, project management, and software development.",
-    images: ["https://navetrix.com/images/skill%20building.jpeg"],
+    images: ["https://navetrix.com/images/skill%20building.aviv"],
   },
   alternates: {
     canonical: "https://navetrix.com/services/skill-building",
@@ -39,7 +39,7 @@ export default function SkillBuildingPage() {
       {/* Left: Image */}
       <div className="flex-1 flex items-stretch mb-8 md:mb-0 max-w-sm">
         <Image
-          src="/images/skill building.jpeg"
+          src="/images/skill building.avif"
           alt="Skill-building Training"
           width={400}
           height={800}

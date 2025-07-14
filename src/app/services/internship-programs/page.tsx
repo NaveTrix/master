@@ -11,7 +11,7 @@ export default function InternshipProgramsPage() {
       {/* Left: Image */}
       <div className="flex-1 flex items-stretch mb-8 md:mb-0 max-w-sm">
         <Image
-          src="/images/internship.jpeg"
+          src="/images/internship.avif"
           alt="Internship"
           width={400}
           height={800}

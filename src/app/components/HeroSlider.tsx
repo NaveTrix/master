@@ -5,14 +5,14 @@ import Link from "next/link";
 import { openContactModal } from "./utils";
 
 const images = [
-    "/images/hero/slide1.jpg",
-    "/images/hero/slide2.jpg",
-    "/images/hero/slide3.jpg",
-    "/images/hero/slide4.jpg",
+    "/images/hero/slide1.avif",
+    "/images/hero/slide2.avif",
+    "/images/hero/slide3.avif",
+    "/images/hero/slide4.avif",
     "/images/hero/slide5.avif",
     "/images/hero/slide6.avif",  
     "/images/hero/slide7.avif",    
-    "/images/hero/slide8.jpg",
+    "/images/hero/slide8.avif",
     "/images/hero/slide9.avif"    
     // Add more images as needed
 ];

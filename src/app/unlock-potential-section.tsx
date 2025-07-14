@@ -7,7 +7,7 @@ const cards = [
 	{
 		title: "Internship Programs",
 		desc: "Gain real-world experience and kickstart your tech career with hands-on internships.",
-		img: "/images/internship.jpg",
+		img: "/images/internship.avif",
 		href: "/internship",
 	},
 	{

@@ -1,6 +1,6 @@
 export const services = [
   {
-    image: "/images/internship.jpeg",
+    image: "/images/internship.avif",
     imageAlt: "Internship",
     title: "Internship",
     description: "Launch your career with hands-on experience.",
@@ -8,7 +8,7 @@ export const services = [
     color: "from-[#00C9A7] to-[#6D5BFF]"
   },
   {
-    image: "/images/skill building.jpeg",
+    image: "/images/skill building.avif",
     imageAlt: "Skill-building Training",
     title: "Skill-building training",
     description: "Enhance your abilities with expert-led training.",
