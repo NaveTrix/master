@@ -1,8 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { openContactModal } from "./utils";
+import type { ComponentType, FunctionComponent, ImgHTMLAttributes } from "react";
 
 const images = [
     "/images/hero/slide1.avif",
@@ -12,7 +12,7 @@ const images = [
     "/images/hero/slide5.avif",
     "/images/hero/slide6.avif",  
     "/images/hero/slide7.avif",    
-    "/images/hero/slide8.avif",
+    "/images/hero/slide8.jpg",
     "/images/hero/slide9.avif"    
     // Add more images as needed
 ];
@@ -23,7 +23,19 @@ const paragraph =
     "We empower growth through real-world internships, expert-led training, and custom software solutions for businesses and individuals.";
 
 export default function HeroSlider() {
+    const [AnimatePresence, setAnimatePresence] = useState<ComponentType<any> | null>(null);
+    const [MotionImg, setMotionImg] = useState<ComponentType<any> | null>(null);
+
+    useEffect(() => {
+        // Dynamically import framer-motion only on client
+        import("framer-motion").then(mod => {
+            setAnimatePresence(() => mod.AnimatePresence);
+            setMotionImg(() => mod.motion.img);
+        });
+    }, []);
+
     const [index, setIndex] = useState(0);
+
     useEffect(() => {
         const interval = setInterval(() => {
             setIndex((prev) => (prev + 1) % images.length);
@@ -31,13 +43,15 @@ export default function HeroSlider() {
         return () => clearInterval(interval);
     }, []);
 
+    if (!MotionImg || !AnimatePresence) return null;
+
     return (
         <section
             className="w-screen min-h-[95vh] min-h-[100svh] h-auto flex items-stretch justify-stretch overflow-hidden z-0 relative"
             style={{ minHeight: '100svh', height: 'auto' }}
         >
             <AnimatePresence initial={false}>
-                <motion.img
+                <MotionImg
                     key={images[index]}
                     src={images[index]}
                     alt="Navetrix Hero Slide"

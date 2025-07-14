@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import ContactModal from "./contact/modal";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
@@ -12,6 +12,8 @@ const NAV_LINKS = [
   { label: "Testimonials", href: "/#testimonials" },
   { label: "Contact", href: "#contact" },
 ];
+
+const ContactModal = dynamic(() => import("./contact/modal"), { ssr: false });
 
 export default function Navbar() {
   const [contactOpen, setContactOpen] = useState(false);
@@ -61,8 +63,12 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    // Always set scrolled to true on service pages
-    if (pathname.startsWith("/services")) {
+    // Always set scrolled to true on service and policy pages
+    if (
+      pathname.startsWith("/services") ||
+      pathname.startsWith("/privacy-policy") ||
+      pathname.startsWith("/cookie-policy")
+    ) {
       setScrolled(true);
       return;
     }

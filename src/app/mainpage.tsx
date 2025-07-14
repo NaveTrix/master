@@ -4,8 +4,10 @@ import Image from "next/image";
 import { services } from "./servicesData";
 import Button from "./components/Button";
 import Card from "./components/Card";
-import HeroSlider from "./components/HeroSlider";
+import dynamic from "next/dynamic";
 import { openContactModal } from "./components/utils";
+
+const HeroSlider = dynamic(() => import("./components/HeroSlider"), { ssr: false });
 
 export const metadata = {
   title: "Navetrix Technologies | Software Development, Training & Internships",
@@ -254,8 +256,8 @@ export default function Home() {
           </div>
         </section>
         {/* Services Preview */}
-        <section id="services" className="w-full min-h-[30vh] flex items-center justify-center bg-gray-100">
-          <div className="w-full max-w-5xl mx-auto flex flex-col justify-center snap-start mt-6 md:mt-12 pt-4 md:pt-6 pb-2 scroll-mt-20">
+        <section id="services" className="w-full min-h-[30vh] flex items-center justify-center bg-gray-100 scroll-mt-20">
+          <div className="w-full max-w-5xl mx-auto flex flex-col justify-center snap-start mt-6 md:mt-12 pt-4 md:pt-6 pb-2">
             <div className="container mx-auto px-4">
               <h2 className="text-3xl font-extrabold text-[#1B1F3B] mb-4 normal-case">
                 From Learning to Launch — We Power Your Tech Journey.
@@ -298,8 +300,8 @@ export default function Home() {
         </section>
 
         {/* Testimonials Section */}
-        <section id="testimonials" className="w-full min-h-[40vh] flex items-center justify-center">
-          <div className="w-full max-w-5xl mx-auto flex flex-col justify-center py-4 snap-start mt-0 scroll-mt-20">
+        <section id="testimonials" className="w-full min-h-[40vh] flex items-center justify-center scroll-mt-20">
+          <div className="w-full max-w-5xl mx-auto flex flex-col justify-center py-4 snap-start mt-0">
             <h2 className="text-xl xs:text-2xl md:text-3xl font-bold mb-4 text-center text-gray-900 whitespace-nowrap overflow-x-auto">Testimonials</h2>
             {/* Modern Carousel/Slideshow */}
             <div className="relative w-full flex flex-col items-center">

@@ -2,7 +2,7 @@
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className="max-w-3xl mx-auto py-16 px-4">
+    <main className="w-full flex flex-col items-center bg-gray-50 py-8 px-2 min-h-[80vh] mt-20 sm:mt-24 md:mt-28">
       <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">Privacy Policy</h1>
       <p className="mb-4 text-gray-700">We value your privacy. This policy explains how Navetrix collects, uses, and protects your personal information.</p>
       <h2 className="text-xl font-semibold text-blue-700 mt-8 mb-2">Information We Collect</h2>
@@ -22,6 +22,6 @@ export default function PrivacyPolicyPage() {
         <li>Contact us at info@navetrix.com for privacy requests</li>
       </ul>
       <p className="text-gray-500 mt-8">This policy may be updated periodically. Please review for changes.</p>
-    </div>
+    </main>
   );
 }
