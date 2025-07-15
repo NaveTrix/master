@@ -6,6 +6,9 @@ import Button from "./components/Button";
 import Card from "./components/Card";
 import dynamic from "next/dynamic";
 import { openContactModal } from "./components/utils";
+import BlogMenuSection from "./blog/BlogMenuSection";
+import SafeRender from "./blog/SafeRender";
+import { usePathname } from "next/navigation";
 
 const HeroSlider = dynamic(() => import("./components/HeroSlider"), { ssr: false });
 
@@ -141,6 +144,8 @@ export default function Home() {
   // Navigation
   const prev = () => setSlide(s => (s - 1 + total) % total);
   const next = () => setSlide(s => (s + 1) % total);
+
+  const pathname = usePathname();
 
   return (
     <>
@@ -338,6 +343,13 @@ export default function Home() {
             </div>
           </div>
         </section>
+        {/* Blog Menu Section (only on /blog routes) */}
+        {pathname.startsWith("/blog") && (
+          <SafeRender>
+            <BlogMenuSection />
+          </SafeRender>
+        )}
+        {/* Contact Section would go here */}
       </main>
     </>
   );
