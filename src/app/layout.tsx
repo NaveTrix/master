@@ -1,3 +1,4 @@
+        <title>Navetrix Technologies - Code. Consult. Catalyze.</title>
 
 import "./globals.css";
 import Navbar from "./Navbar";
