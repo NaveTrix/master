@@ -10,8 +10,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" data-scroll-behavior="smooth">
       <head>
         <title>Navetrix Technologies - Code. Consult. Catalyze.</title>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-icon.png" />
+        <link rel="icon" href="/favicon.ico?v=2" />
+        <link rel="apple-touch-icon" href="/apple-icon.png?v=2" />
         {/* Preconnect and preload Google Fonts for CLS optimization */}
         <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
