@@ -228,8 +228,8 @@ export default function Home() {
                   </ul>
                 </div>
                 <div className="flex gap-2 mt-2">
-                  <span className="inline-block bg-[#00C9A7]/10 text-[#00C9A7] font-bold px-3 py-1 rounded-full text-xs">Remote & Onsite</span>
-                  <span className="inline-block bg-[#6D5BFF]/10 text-[#6D5BFF] font-bold px-3 py-1 rounded-full text-xs">Global Reach</span>
+                  <span className="inline-block bg-[#00C9A7] text-white font-bold px-3 py-1 rounded-full text-xs">Remote & Onsite</span>
+                  <span className="inline-block bg-[#6D5BFF] text-white font-bold px-3 py-1 rounded-full text-xs">Global Reach</span>
                 </div>
               </Card>
               {/* Why Choose Navetrix? */}
@@ -250,7 +250,7 @@ export default function Home() {
                     Thrive in a supportive environment that values diversity and prepares you for the future of work.
                   </p>
                 </div>
-                <span className="inline-block bg-[#1B1F3B]/10 text-[#1B1F3B] font-bold px-3 py-1 rounded-full text-xs mt-2">Trusted by 1000+ learners</span>
+                <span className="inline-block bg-[#1B1F3B] text-white font-bold px-3 py-1 rounded-full text-xs mt-2">Trusted by 1000+ learners</span>
               </Card>
             </div>
           </div>

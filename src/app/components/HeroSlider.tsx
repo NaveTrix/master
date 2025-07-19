@@ -77,7 +77,7 @@ export default function HeroSlider() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center w-full max-w-2xl mx-auto">
                     <button
                         type="button"
-                        className="bg-[#00897B] hover:bg-[#00695C] text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-all text-lg min-w-[180px] block text-center focus:outline-none focus:ring-2 focus:ring-[#00C9A7] focus:ring-offset-2"
+                        className="bg-[#00695C] hover:bg-[#004D40] text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-all text-lg min-w-[180px] block text-center focus:outline-none focus:ring-2 focus:ring-[#00C9A7] focus:ring-offset-2"
                         onClick={openContactModal}
                         aria-label="Start Your Journey with Navetrix"
                     >
