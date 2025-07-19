@@ -228,7 +228,7 @@ export default function Home() {
                   </ul>
                 </div>
                 <div className="flex gap-2 mt-2">
-                  <span className="inline-block bg-[#00C9A7] text-white font-bold px-3 py-1 rounded-full text-xs">Remote & Onsite</span>
+                  <span className="inline-block bg-[#00695C] text-white font-bold px-3 py-1 rounded-full text-xs">Remote & Onsite</span>
                   <span className="inline-block bg-[#6D5BFF] text-white font-bold px-3 py-1 rounded-full text-xs">Global Reach</span>
                 </div>
               </Card>
@@ -326,11 +326,11 @@ export default function Home() {
                 </div>
               )}
               <div className="flex gap-2 mt-6 justify-center">
-                <button onClick={prev} className="w-10 h-10 rounded-full bg-[#00C9A7] text-white flex items-center justify-center shadow hover:bg-[#1B1F3B] transition">
+                <button onClick={prev} className="w-10 h-10 rounded-full bg-[#00695C] text-white flex items-center justify-center shadow hover:bg-[#1B1F3B] transition">
                   <span className="sr-only">Previous</span>
                   <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" /></svg>
                 </button>
-                <button onClick={next} className="w-10 h-10 rounded-full bg-[#00C9A7] text-white flex items-center justify-center shadow hover:bg-[#1B1F3B] transition">
+                <button onClick={next} className="w-10 h-10 rounded-full bg-[#00695C] text-white flex items-center justify-center shadow hover:bg-[#1B1F3B] transition">
                   <span className="sr-only">Next</span>
                   <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" /></svg>
                 </button>
