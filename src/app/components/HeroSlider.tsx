@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { openContactModal } from "./utils";
+import { AnimatePresence, motion } from "framer-motion";
 
 const images = [
     "/images/hero/slide1.avif",
@@ -22,19 +23,6 @@ const paragraph =
     "We empower growth through real-world internships, expert-led training, and custom software solutions for businesses and individuals.";
 
 export default function HeroSlider() {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const [AnimatePresence, setAnimatePresence] = useState<any>(null);
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const [MotionImg, setMotionImg] = useState<any>(null);
-
-    useEffect(() => {
-        // Dynamically import framer-motion only on client
-        import("framer-motion").then(mod => {
-            setAnimatePresence(() => mod.AnimatePresence);
-            setMotionImg(() => mod.motion.img);
-        });
-    }, []);
-
     const [index, setIndex] = useState(0);
 
     useEffect(() => {
@@ -44,15 +32,13 @@ export default function HeroSlider() {
         return () => clearInterval(interval);
     }, []);
 
-    if (!MotionImg || !AnimatePresence) return null;
-
     return (
         <section
             className="w-screen min-h-[95vh] min-h-[100svh] h-auto flex items-stretch justify-stretch overflow-hidden z-0 relative"
             style={{ minHeight: '100svh', height: 'auto' }}
         >
             <AnimatePresence initial={false}>
-                <MotionImg
+                <motion.img
                     key={images[index]}
                     src={images[index]}
                     alt="Navetrix Hero Slide"

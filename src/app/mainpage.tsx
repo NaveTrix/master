@@ -4,10 +4,9 @@ import Image from "next/image";
 import { services } from "./servicesData";
 import Button from "./components/Button";
 import Card from "./components/Card";
-import dynamic from "next/dynamic";
-import { openContactModal } from "./components/utils";
 
-const HeroSlider = dynamic(() => import("./components/HeroSlider"), { ssr: false });
+import HeroSlider from "./components/HeroSlider";
+import { openContactModal } from "./components/utils";
 
 export const metadata = {
   title: "Navetrix Technologies | Software Development, Training & Internships",
