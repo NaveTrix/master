@@ -15,8 +15,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Preconnect and preload Google Fonts for CLS optimization */}
         <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="preload" as="font" href="https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTcviYw.ttf" type="font/ttf" crossOrigin="anonymous" />
-        <link rel="preload" as="font" href="https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfedw.ttf" type="font/ttf" crossOrigin="anonymous" />
         {/* SEO Meta Tags */}
         <meta name="description" content="Navetrix Technologies provides real-world tech internships, expert-led training, and software solutions to empower freshers and businesses." />
         <meta name="keywords" content="Navetrix, internships, software development, training, consulting, tech careers, freshers, business solutions" />
