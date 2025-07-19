@@ -344,7 +344,7 @@ export default function Home() {
           </div>
         </section>
         {/* Blog Menu Section (only on /blog routes) */}
-        {pathname.startsWith("/blog") && (
+        {pathname && pathname.startsWith("/blog") && (
           <SafeRender>
             <BlogMenuSection />
           </SafeRender>

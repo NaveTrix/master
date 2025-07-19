@@ -1,6 +1,6 @@
 import { getAllBlogSlugsFromMenu, getPostMetaFromMenu, getPostContent } from "./getAllBlogSlugsFromMenu";
 import fs from "fs";
-import path from "path";
+// import path from "path";
 
 jest.mock("./menu.json", () => ({
   python: [

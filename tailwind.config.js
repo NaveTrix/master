@@ -1,8 +1,10 @@
+import typography from '@tailwindcss/typography';
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     './src/**/*.{js,ts,jsx,tsx,mdx}',
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/blog/[...slug]/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
@@ -30,7 +32,7 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [typography],
   corePlugins: {
     scrollSnapType: true,
     scrollSnapAlign: true,

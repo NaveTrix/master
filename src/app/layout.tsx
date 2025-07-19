@@ -31,7 +31,7 @@ export default function RootLayout({
   const currentYear = new Date().getFullYear();
 
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behavior="smooth">
       <head>
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-icon.png" />

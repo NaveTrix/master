@@ -64,11 +64,14 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    // Always set scrolled to true on service and policy pages
+    // Always set scrolled to true on service, policy, and blog pages
     if (
-      pathname.startsWith("/services") ||
-      pathname.startsWith("/privacy-policy") ||
-      pathname.startsWith("/cookie-policy")
+      pathname && (
+        pathname.startsWith("/services") ||
+        pathname.startsWith("/privacy-policy") ||
+        pathname.startsWith("/cookie-policy") ||
+        pathname.startsWith("/blog")
+      )
     ) {
       setScrolled(true);
       return;

@@ -1,2 +1,0 @@
-# techcontent
-Ppublich tech content

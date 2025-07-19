@@ -9,7 +9,7 @@ export default function BlogMenuSection() {
   try {
     categories = Object.entries(menu);
   } catch (e) {
-    setError("Failed to load blog menu.");
+    setError("Failed to load blog menu."+e);
   }
 
   if (error) {

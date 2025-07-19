@@ -2,6 +2,7 @@
 import menu from './menu.json';
 import fs from 'fs';
 import matter from 'gray-matter';
+import path from 'path';
 
 type BlogSlug = { slug: string[] };
 
@@ -34,10 +35,13 @@ export function getPostMetaFromMenu(slug: string[]): { title: string, path: stri
   return null;
 }
 
-export type FrontMatter = Record<string, any>;
+export type FrontMatter = Record<string, unknown>;
 
-export function getPostContent(path: string): { content: string, data: FrontMatter } {
-  const fullPath = require('path').join(__dirname, path);
+export function getPostContent(pathStr: string): { content: string, data: FrontMatter } {
+  // Always resolve from project root
+  const fullPath = path.join(process.cwd(), 'src', 'techContent', pathStr);
+  // Uncomment for debugging:
+  // console.log('Reading markdown from:', fullPath);
   const file = fs.readFileSync(fullPath, 'utf8');
   const { content, data } = matter(file);
   return { content, data };
